@@ -1,15 +1,17 @@
 import { Flex } from '@mantine/core';
 import React, { Fragment, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getBooks } from '../../store/bookSlice';
 import BookInfo from './BookInfo';
 import BooksList from './BooksList';
 import './book.css';
 
 const PostContainer = () => {
+  const { isLoading, books } = useSelector((state) => state.books)
   const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(getBooks())
+    dispatch(getBooks({ id: 1 }))
   }, [dispatch])
 
   return (
@@ -24,7 +26,7 @@ const PostContainer = () => {
           direction="row"
           wrap="wrap">
           <div className='col'>
-            <BooksList />
+            <BooksList isLoading={isLoading} books={books} />
           </div>
           <hr />
           <div className='col side-line'>

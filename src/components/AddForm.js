@@ -1,3 +1,4 @@
+import { Flex } from '@mantine/core';
 import React from 'react';
 
 const Addform = () => {
@@ -5,16 +6,23 @@ const Addform = () => {
     <div className='row'>
       <div className='col-6 offset-3 mt-3'>
         <h2>Insert Book</h2>
-        <form>
-          <div className='form-group'>
+        <Flex
+          mih={50}
+          gap="md"
+          justify="flex-start"
+          align="flex-start"
+          direction="column"
+          wrap="wrap"
+        >
+          <div className='form-group' style={{ width: "100%" }}>
             <label htmlFor='title'>Title</label>
             <input type='text' className='form-control' id='title' required />
           </div>
-          <div className='form-group'>
+          <div className='form-group' style={{ width: "100%" }}>
             <label htmlFor='price'>Price</label>
             <input type='number' className='form-control' id='price' required />
           </div>
-          <div className='form-group'>
+          <div className='form-group' style={{ width: "100%" }}>
             <label htmlFor='Description'>Description</label>
             <textarea
               className='form-control'
@@ -26,7 +34,7 @@ const Addform = () => {
           <button type='submit' className='btn btn-primary'>
             Submit
           </button>
-        </form>
+        </Flex>
       </div>
     </div>
   );
