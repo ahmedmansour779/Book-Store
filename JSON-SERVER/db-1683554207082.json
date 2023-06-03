@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "learn react",
+      "description": "learn react from kimz code",
+      "price": 30
+    },
+    {
+      "id": 2,
+      "title": "learn js",
+      "description": "learn js from kimz code",
+      "price": 50
+    },
+    {
+      "id": 3,
+      "title": "learn css",
+      "description": "learn css from kimz code",
+      "price": 50
+    }
+  ]
+}
